@@ -110,5 +110,21 @@ ds.predict(model_fit)
 Outputs.saveMainCurves(ds, outputFolder)
 Outputs.plotMainCurves(ds, outputFolder)
 
-if problem == 1 or problem == 2: # Cannot be done for Treloar, since it's not based on an analytical strain energy
-	Outputs.saveAndPlotErrors(ds, model_full, outputFolder, 55, 300, stepSizeI1=0.2, stepSizeI2=1.)
+print("Program is still running before saveAndPlotErrors function call")
+
+#if problem == 1 or problem == 2: # Cannot be done for Treloar, since it's not based on an analytical strain energy
+#	Outputs.saveAndPlotErrors(ds, model_full, outputFolder, 55, 300, stepSizeI1=0.2, stepSizeI2=1.)
+
+import time
+
+if problem == 1 or problem == 2:
+	start_time = time.time()
+	timeout = 60*15 # 15 minutes timeout
+	while True:
+		if time.time() - start_time > timeout:
+			raise TimeoutError("The function took too long to execute.")
+		try:
+			Outputs.saveAndPlotErrors(ds, model_full, outputFolder, 55, 300, stepSizeI1=0.2, stepSizeI2=1.)
+			break
+		except KeyboardInterrupt:
+			break
