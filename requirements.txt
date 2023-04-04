@@ -1,9 +1,0 @@
-Python==3.8.3
-#keras==2.4.2 # installed via pip
-tensorflow==2.2.0
-pandas==1.0.5
-numpy==1.19.0
-matplotlib==3.2.2
-scikit-learn==0.23.2
-pydot==1.4.1
-#graphviz   # installed via conda (2.42.3)
