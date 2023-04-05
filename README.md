@@ -1,3 +1,6 @@
+All credit for the code goes to the authors of the original repository https://github.com/ConstitutiveANN/CANN. This repository is a fork of the original, with modifications made by Héctor Lobato, researcher at Leartiker.
+
+
 Article: K. Linka, M. Hillgärtner, K. P. Abdolazizi, R. C. Aydin, M. Itskov, & C. J. Cyron (2021). Constitutive artificial neural networks: A fast and general approach to predictive data-driven constitutive modeling by deep learning. Journal of Computational Physics, 429, 110010. https://doi.org/10.1016/j.jcp.2020.110010
 
 
